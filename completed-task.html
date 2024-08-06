@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App | Completed Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div id="root" class="wrapper">
+    <header class="header">
+      <a href="./index.html" class="header__turn-backpage-button button"></a>
+      <h1 class="header__title">Completed Task</h1>
+    </header>
+    <main class="main wrapper__main--completed-task">
+      <div class="container">
+        <ul class="task-list task-list--completed-task">
+          <template id="empty-list-template">
+            <li class="task-list__item empty-list">
+              <p class="empty-list__text">No completed tasks</p>
+            </li>
+          </template>
+          <template id="task-template">
+            <li class="task-list__item">
+              <article class="task">
+                <div class="task__info">
+                  <h2 class="task__title"></h2>
+                  <p class="task__detail"></p>
+                </div>
+              </article>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./dist/completedTask.js"></script>
+</body>
+</html>

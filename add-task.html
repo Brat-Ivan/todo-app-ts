@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App | Add Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div id="root" class="wrapper">
+    <header class="header">
+      <a href="./index.html" class="header__turn-backpage-button button"></a>
+      <h1 class="header__title">Add Task</h1>
+    </header>
+    <main class="main main--bg--white">
+      <div class="container">
+        <div class="main__content">
+          <form novalidate class="form main__form">
+            <div class="field form__field">
+              <input
+                type="text"
+                placeholder="Title"
+                name="title"
+                autocomplete="off"
+                id="title-input"
+                class="field__control"
+              />
+              <div id="title-error" class="error">Please add a title</div>
+            </div>
+            <div class="field form__field">
+              <input
+                type="text"
+                placeholder="Detail"
+                name="detail"
+                autocomplete="off"
+                id="detail-input"
+                class="field__control"
+              />
+              <div id="detail-error" class="error">Please add a detail</div>
+            </div>
+            <div class="field form__field">
+              <label for="deadline-input" class="field__label">Deadline</label>
+              <input
+                type="date"
+                name="deadline"
+                id="deadline-input"
+                class="field__date-input"
+              />
+            </div>
+            <div class="field form__field">
+              <label for="priority-dropdown" class="field__label">Priority</label>
+              <select name="priority" id="priority-dropdown" class="field__dropdown">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+                <option value="None" selected>None</option>
+              </select>
+            </div>
+            <button class="form__add-button button">Add</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./dist/addTask.js"></script>
+</body>
+</html>
