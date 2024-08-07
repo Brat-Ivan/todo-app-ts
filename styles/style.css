@@ -241,7 +241,7 @@ body {
 .task-list__item--done-task .task__deadline,
 .task-list__item--done-task .task__priority {
   text-decoration: line-through;
-  color: #8b8787;
+  color: var(--color-accent-1);
 }
 
 .task__buttons-list {

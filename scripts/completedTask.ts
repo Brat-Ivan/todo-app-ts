@@ -1,3 +1,4 @@
+import { PRIORITY } from "./constants.js";
 import { Task } from "./types.js";
 
 const taskList = document.querySelector('.task-list') as HTMLUListElement;
@@ -19,11 +20,11 @@ function renderTasks(): void {
     taskTitle.textContent = task.title;
     taskDetail.textContent = task.detail;
 
-    if (task.priority === 'High') {
+    if (task.priority === PRIORITY.high) {
       taskElement.classList.add('task--priority--high');
-    } else if (task.priority === 'Medium') {
+    } else if (task.priority === PRIORITY.medium) {
       taskElement.classList.add('task--priority--medium');
-    } else if (task.priority === 'Low') {
+    } else if (task.priority === PRIORITY.low) {
       taskElement.classList.add('task--priority--low');
     }
     
